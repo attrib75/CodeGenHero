@@ -15,21 +15,17 @@ namespace CodeGenHero.BingoBuzz.WebUI.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult MyProfile()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult MyStats()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Sysconfig()
         {
             return View();
         }
