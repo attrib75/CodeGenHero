@@ -1,0 +1,36 @@
+﻿.subhead {
+  text-transform: uppercase;
+  font-size: 0.86em;
+  color: gray; }
+
+.bb-bingocard {
+  padding: 6px;
+  border: 1px solid green;
+  color: darkgreen;
+  background-color: lightgreen; }
+  .bb-bingocard .bb-cardbody {
+    margin: 12px; }
+    .bb-bingocard .bb-cardbody .bb-cardsquarerow {
+      padding: 0;
+      margin: 5px;
+      display: block;
+      text-align: center; }
+      .bb-bingocard .bb-cardbody .bb-cardsquarerow .bb-cardsquare {
+        padding: 15px;
+        margin: 0;
+        width: 120px;
+        height: 120px;
+        display: inline-block;
+        border: 1px solid #09093B;
+        color: #AA8E39;
+        background-color: #8080B3; }
+      .bb-bingocard .bb-cardbody .bb-cardsquarerow .bb-cardsquare-selected {
+        padding: 15px;
+        margin: 0;
+        width: 120px;
+        height: 120px;
+        display: inline-block;
+        border: 1px solid #554000;
+        color: #343477;
+        background-color: #FFEAAA; }
+

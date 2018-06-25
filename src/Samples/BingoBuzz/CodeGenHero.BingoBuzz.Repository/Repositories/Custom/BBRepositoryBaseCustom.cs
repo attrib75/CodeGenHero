@@ -70,7 +70,7 @@ namespace CodeGenHero.BingoBuzz.Repository
 			 {
 				 qryItem = qryItem
 				 .Include(x => x.BingoInstanceStatusType).AsNoTracking()
-				 .Include(x => x.Meeting).AsNoTracking()
+				 // .Include(x => x.Meeting).AsNoTracking() -- Excluded navigation property per configuration.
 				 .Include(x => x.CreatedUser).AsNoTracking()
 				 .Include(x => x.UpdatedUser).AsNoTracking()
 				 .Include(x => x.BingoInstanceContents).AsNoTracking()
@@ -449,7 +449,7 @@ namespace CodeGenHero.BingoBuzz.Repository
 				 .Include(x => x.Company).AsNoTracking()
 				 .Include(x => x.CreatedUser).AsNoTracking()
 				 .Include(x => x.UpdatedUser).AsNoTracking()
-				 // .Include(x => x.BingoInstances).AsNoTracking() -- Excluded navigation property per configuration.
+				 .Include(x => x.BingoInstances).AsNoTracking()
 				 .Include(x => x.MeetingAttendees).AsNoTracking()
 				 .Include(x => x.MeetingSchedules).AsNoTracking();
 			 }

@@ -4,6 +4,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
     <UserSecretsId>5393bf2c-409d-402f-8429-c655e17040ac</UserSecretsId>
+    <Version>0.1.0</Version>
+    <Description>An ASP.NET MVC Core 2.1 User Interface to the MSCTek BingoBuzz sample application.</Description>
+    <Copyright>Copyright 2018 by Micro Support Center, Inc.</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

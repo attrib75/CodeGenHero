@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+
 namespace CodeGenHero.BingoBuzz.WebUI
 {
     public class Startup
@@ -41,6 +42,7 @@ namespace CodeGenHero.BingoBuzz.WebUI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
             }
             else
             {
