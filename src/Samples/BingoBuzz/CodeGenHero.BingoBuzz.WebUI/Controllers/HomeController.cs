@@ -29,7 +29,7 @@ namespace CodeGenHero.BingoBuzz.WebUI.Controllers
             currentGameContext.CurrentBingoCard = new BingoCard(5);
             currentGameContext.CurrentBingoCard.GameName = "Beer City Code lecture /w batman (paul) and robin";
 
-            bool shouldSelectItemsForTest = false;
+            bool shouldSelectItemsForTest = true;
 
             currentGameContext.CurrentBingoCard.Squares[0, 0] = new CardSquare(0, 0, "a card", shouldSelectItemsForTest);
             currentGameContext.CurrentBingoCard.Squares[0, 1] = new CardSquare(0, 1, "two cards");

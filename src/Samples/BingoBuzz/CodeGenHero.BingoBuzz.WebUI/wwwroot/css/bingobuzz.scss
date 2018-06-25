@@ -93,39 +93,56 @@ body {
     border: 1px solid $card-bordercolor;
     color: $card-forecolor;
     background-color: $card-backcolor;
+    min-width:680px;
+    min-height:686px;
 
     .bb-cardheader {
     }
 
     .bb-cardbody {
         margin: 12px;
+        
 
         .bb-cardsquarerow {
             padding: 0;
-            margin: 5px;
+            margin: 6px;
             display: block;
             text-align: center;
+            position: relative;
+            clear: both;
 
             .bb-cardsquare {
+                //positioning:
+                position: relative;
+                float: left;
+                display: block;
+                //sizing:
                 padding: 15px;
-                margin: 0;
+                margin: 2px;
                 width: $squaresize;
                 height: $squaresize;
-                display: inline-block;
-                border: 1px solid $square-bordercolor;
+                //color:
                 color: $square-forecolor;
                 background-color: $square-backcolor;
+                //mix:
+                border: 1px solid $square-bordercolor;
             }
 
             .bb-cardsquare-selected {
+                //positioning:
+                position: relative;
+                float: left;
+                display: block;
+                //sizing:
                 padding: 15px;
-                margin: 0;
+                margin: 2px;
                 width: $squaresize;
                 height: $squaresize;
-                display: inline-block;
-                border: 1px solid $square-bordercolor-selected;
+                //color:
                 color: $square-forecolor-selected;
                 background-color: $square-backcolor-selected;
+                //mix:
+                border: 1px solid $square-bordercolor-selected;
             }
         }
     }

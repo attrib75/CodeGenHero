@@ -10,8 +10,7 @@ namespace CodeGenHero.BingoBuzz.WebUI.Models
         public int Size { get; set; }
 
         public CardSquare[,] Squares;
-        
-        public string GameName { get; set; }
+       
         
         public BingoCard(int size)
         {

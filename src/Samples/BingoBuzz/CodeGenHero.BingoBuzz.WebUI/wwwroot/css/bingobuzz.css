@@ -7,30 +7,38 @@
   padding: 6px;
   border: 1px solid green;
   color: darkgreen;
-  background-color: lightgreen; }
+  background-color: lightgreen;
+  min-width: 680px;
+  min-height: 686px; }
   .bb-bingocard .bb-cardbody {
     margin: 12px; }
     .bb-bingocard .bb-cardbody .bb-cardsquarerow {
       padding: 0;
-      margin: 5px;
+      margin: 6px;
       display: block;
-      text-align: center; }
+      text-align: center;
+      position: relative;
+      clear: both; }
       .bb-bingocard .bb-cardbody .bb-cardsquarerow .bb-cardsquare {
+        position: relative;
+        float: left;
+        display: block;
         padding: 15px;
-        margin: 0;
+        margin: 2px;
         width: 120px;
         height: 120px;
-        display: inline-block;
-        border: 1px solid #09093B;
         color: #AA8E39;
-        background-color: #8080B3; }
+        background-color: #8080B3;
+        border: 1px solid #09093B; }
       .bb-bingocard .bb-cardbody .bb-cardsquarerow .bb-cardsquare-selected {
+        position: relative;
+        float: left;
+        display: block;
         padding: 15px;
-        margin: 0;
+        margin: 2px;
         width: 120px;
         height: 120px;
-        display: inline-block;
-        border: 1px solid #554000;
         color: #343477;
-        background-color: #FFEAAA; }
+        background-color: #FFEAAA;
+        border: 1px solid #554000; }
 
