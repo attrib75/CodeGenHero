@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CodeGenHero.BingoBuzz.GameState
+namespace CodeGenHero.BingoBuzz.GameState.Models
 {
     public class Meeting
     {
@@ -17,6 +17,8 @@ namespace CodeGenHero.BingoBuzz.GameState
         public DateTime CreatedUsername { get; set; }
 
         public BingoCard BingoCard { get; set; }
+
+        public User Winner { get; set; }
 
     }
 }

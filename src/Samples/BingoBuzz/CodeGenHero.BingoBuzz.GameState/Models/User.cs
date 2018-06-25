@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CodeGenHero.BingoBuzz.GameState
+namespace CodeGenHero.BingoBuzz.GameState.Models
 {
     public class User
     {
