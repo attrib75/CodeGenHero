@@ -5,7 +5,7 @@ using CodeGenHero.BingoBuzz.GameState.Models;
 
 namespace CodeGenHero.BingoBuzz.GameState.BusinessInterfaces
 {
-    interface IGameStateQueries
+    public interface IGameStateQueries
     {
         GameContext GetGameContext(ClientStateData clientStateData);
 
