@@ -19,4 +19,10 @@
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CodeGenHero.BingoBuzz.GameState.APIClientProvider\CodeGenHero.BingoBuzz.GameState.APIClientProvider.csproj" />
+    <ProjectReference Include="..\CodeGenHero.BingoBuzz.GameState.MockProvider\CodeGenHero.BingoBuzz.GameState.MockProvider.csproj" />
+    <ProjectReference Include="..\CodeGenHero.BingoBuzz.GameState\CodeGenHero.BingoBuzz.GameState.csproj" />
+  </ItemGroup>
+
 </Project>

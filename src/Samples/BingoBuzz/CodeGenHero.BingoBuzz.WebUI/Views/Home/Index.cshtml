@@ -10,97 +10,118 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-sm-12">
+@if (Model.GameState == GameStateEnum.NOT_LOGGED_IN)
+{
 
-        <div class="alert alert-info" role="alert">Login using your microsoft account and get started right away!</div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="alert alert-info" role="alert">Login using your microsoft account and get started right away!</div>
+        </div>
     </div>
-</div>
 
+}
 
-<div class="row">
-    <div class="col-sm-12">
+@if (Model.GameState == GameStateEnum.LOGGED_IN_NO_GAMES)
+{
 
-        <div class="alert alert-info" role="alert">Select from an existing game or chose to create a new one!</div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="alert alert-info" role="alert">Create a game and invite coworkers to play with you. </div>
+        </div>
     </div>
-</div>
 
+}
 
-<div class="row">
-    <div class="col-sm-12">
+@if (Model.GameState == GameStateEnum.LOGGED_IN_LISTING_GAMES)
+{
 
-        <div class="alert alert-info" role="alert">Create a game and invite coworkers to play with you. </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="alert alert-info" role="alert">Select from an existing game or chose to create a new one!</div>
+        </div>
     </div>
-</div>
+
+}
 
 
-<div class="row">
-    <div class="col-sm-12">
-        <div class="alert alert-info" role="alert">Mark off squares when eligible and see who gets Bingo first!</div>
+@if (Model.GameState == GameStateEnum.LOGGED_IN_ACTIVE_GAME)
+{
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="alert alert-info" role="alert">Mark off squares when eligible and see who gets Bingo first!</div>
+        </div>
     </div>
-</div>
 
 
-<div class="row">
+    <div class="row">
 
-    <div class="col-md-9">
-        <div class="bb-bingocard">
-            <div class="bb-cardheader">BingoBuzz Card for @Model.CurrentBingoCard.GameName</div>
+        <div class="col-md-9">
+            <div class="bb-bingocard">
+                <div class="bb-cardheader">BingoBuzz Card for @Model.ActiveMeeting.Name</div>
 
-            <div class="bb-cardbody">
-                @for (int x = 0; x < Model.CurrentBingoCard.Size; x++)
-                {
-                    <div class="bb-cardsquarerow">
-                        @for (int y = 0; y < Model.CurrentBingoCard.Size; y++)
-                        {
-                            var square = Model.CurrentBingoCard.Squares[x, y];
-                            if (square.IsSelected)
-                            { 
-                                <div class="bb-cardsquare-selected">
-                                    <div>@square.Text</div>
-                                </div>
-                            }
-                            else
+                <div class="bb-cardbody">
+                    @for (int x = 0; x < Model.ActiveMeeting.BingoCard.Size; x++)
+                    {
+                        <div class="bb-cardsquarerow">
+                            @for (int y = 0; y < Model.ActiveMeeting.BingoCard.Size; y++)
                             {
-                                <div class="bb-cardsquare">
-                                    <div>@square.Text</div>
-                                </div>
+                                var square = Model.ActiveMeeting.BingoCard.Squares[x, y];
+                                if (square.IsSelected)
+                                {
+                                    <div class="bb-cardsquare-selected">
+                                        <div>@square.Text</div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="bb-cardsquare">
+                                        <div>@square.Text</div>
+                                    </div>
+                                }
+
+
                             }
+                        </div>
 
+                    }
+                </div>
 
-                        }
-                    </div>
-
-                }
             </div>
 
         </div>
+        <div class="col-md-3">
+            <div class="well">
 
-    </div>
-    <div class="col-md-3">
-        <div class="well">
+                <table class="table table-condensed">
+                    <tr>
+                        <th scope="col">User Statistics for @Model.User.Fullname</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Bingos!</th>
+                        <td>@Model.User.Stats_Bingos</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Games</th>
+                        <td>@Model.User.Stats_Games</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Clicks</th>
+                        <td>@Model.User.Stats_Clicks</td>
+                    </tr>
+                </table>
+            </div>
 
-            <table class="table table-condensed">
-                <tr>
-                    <th scope="col">User Statistics for @Model.Username</th>
-                </tr>
-                <tr>
-                    <th scope="row">Bingos!</th>
-                    <td>@Model.UserStats_Bingos</td>
-                </tr>
-                <tr>
-                    <th scope="row">Games</th>
-                    <td>@Model.UserStats_Games</td>
-                </tr>
-                <tr>
-                    <th scope="row">Clicks</th>
-                    <td>@Model.UserStats_Clicks</td>
-                </tr>
-            </table>
+
         </div>
 
 
     </div>
 
+}
 
-</div>
+
+
